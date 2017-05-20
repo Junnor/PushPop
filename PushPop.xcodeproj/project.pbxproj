@@ -9,19 +9,19 @@
 /* Begin PBXBuildFile section */
 		8B2282991ECF487400FE73F3 /* ShadowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2282981ECF487400FE73F3 /* ShadowViewController.swift */; };
 		8B257C0C1ED012290090A78B /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B257C0B1ED012290090A78B /* MainController.swift */; };
+		8B257C0E1ED017AC0090A78B /* Push3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B257C0D1ED017AC0090A78B /* Push3ViewController.swift */; };
 		8B84EAE31EC54F8A001B1BFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B84EAE21EC54F8A001B1BFF /* AppDelegate.swift */; };
 		8B84EAE81EC54F8A001B1BFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B84EAE61EC54F8A001B1BFF /* Main.storyboard */; };
 		8B84EAEA1EC54F8A001B1BFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B84EAE91EC54F8A001B1BFF /* Assets.xcassets */; };
 		8B84EAED1EC54F8A001B1BFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B84EAEB1EC54F8A001B1BFF /* LaunchScreen.storyboard */; };
 		8B84EAF51EC5506E001B1BFF /* Push1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B84EAF41EC5506E001B1BFF /* Push1ViewController.swift */; };
 		8B84EAF71EC55076001B1BFF /* Push2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B84EAF61EC55076001B1BFF /* Push2ViewController.swift */; };
-		8B84EAF91EC55080001B1BFF /* PopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B84EAF81EC55080001B1BFF /* PopViewController.swift */; };
-		8B84EB0B1EC5A89E001B1BFF /* T2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B84EB0A1EC5A89E001B1BFF /* T2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8B2282981ECF487400FE73F3 /* ShadowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowViewController.swift; sourceTree = "<group>"; };
 		8B257C0B1ED012290090A78B /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		8B257C0D1ED017AC0090A78B /* Push3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Push3ViewController.swift; sourceTree = "<group>"; };
 		8B84EADF1EC54F8A001B1BFF /* PushPop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushPop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B84EAE21EC54F8A001B1BFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B84EAE71EC54F8A001B1BFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,8 +30,6 @@
 		8B84EAEE1EC54F8A001B1BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B84EAF41EC5506E001B1BFF /* Push1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Push1ViewController.swift; sourceTree = "<group>"; };
 		8B84EAF61EC55076001B1BFF /* Push2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Push2ViewController.swift; sourceTree = "<group>"; };
-		8B84EAF81EC55080001B1BFF /* PopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopViewController.swift; sourceTree = "<group>"; };
-		8B84EB0A1EC5A89E001B1BFF /* T2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = T2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,11 +64,10 @@
 			children = (
 				8B84EAE21EC54F8A001B1BFF /* AppDelegate.swift */,
 				8B257C0B1ED012290090A78B /* MainController.swift */,
+				8B2282981ECF487400FE73F3 /* ShadowViewController.swift */,
 				8B84EAF41EC5506E001B1BFF /* Push1ViewController.swift */,
 				8B84EAF61EC55076001B1BFF /* Push2ViewController.swift */,
-				8B84EAF81EC55080001B1BFF /* PopViewController.swift */,
-				8B84EB0A1EC5A89E001B1BFF /* T2ViewController.swift */,
-				8B2282981ECF487400FE73F3 /* ShadowViewController.swift */,
+				8B257C0D1ED017AC0090A78B /* Push3ViewController.swift */,
 				8B84EAE61EC54F8A001B1BFF /* Main.storyboard */,
 				8B84EAE91EC54F8A001B1BFF /* Assets.xcassets */,
 				8B84EAEB1EC54F8A001B1BFF /* LaunchScreen.storyboard */,
@@ -154,10 +151,9 @@
 			files = (
 				8B2282991ECF487400FE73F3 /* ShadowViewController.swift in Sources */,
 				8B257C0C1ED012290090A78B /* MainController.swift in Sources */,
-				8B84EB0B1EC5A89E001B1BFF /* T2ViewController.swift in Sources */,
 				8B84EAF51EC5506E001B1BFF /* Push1ViewController.swift in Sources */,
 				8B84EAF71EC55076001B1BFF /* Push2ViewController.swift in Sources */,
-				8B84EAF91EC55080001B1BFF /* PopViewController.swift in Sources */,
+				8B257C0E1ED017AC0090A78B /* Push3ViewController.swift in Sources */,
 				8B84EAE31EC54F8A001B1BFF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

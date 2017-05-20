@@ -10,19 +10,4 @@ import UIKit
 
 class Push1ViewController: UIViewController {
     
-    @IBOutlet weak var imageView: UIImageView!
-
-    let value: CGFloat = 30
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-//        imageView?.layer.shadowColor = UIColor.red.cgColor
-        imageView?.layer.shadowOffset = CGSize(width: 0, height: 3)
-        imageView?.layer.shadowOpacity = 0.3
-        imageView?.layer.shadowRadius = 30
-        
-
-    }
-    
-
 }

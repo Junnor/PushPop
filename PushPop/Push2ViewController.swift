@@ -12,17 +12,7 @@ class Push2ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
     
-    
-    @IBAction func unwind(unwindSegue :UIStoryboardSegue){
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.navigationController?.navigationBar.alpha = 0.0
     }
 
 }
