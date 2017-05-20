@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8B2282991ECF487400FE73F3 /* ShadowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2282981ECF487400FE73F3 /* ShadowViewController.swift */; };
+		8B257C0C1ED012290090A78B /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B257C0B1ED012290090A78B /* MainController.swift */; };
 		8B84EAE31EC54F8A001B1BFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B84EAE21EC54F8A001B1BFF /* AppDelegate.swift */; };
 		8B84EAE81EC54F8A001B1BFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B84EAE61EC54F8A001B1BFF /* Main.storyboard */; };
 		8B84EAEA1EC54F8A001B1BFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B84EAE91EC54F8A001B1BFF /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		8B2282981ECF487400FE73F3 /* ShadowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowViewController.swift; sourceTree = "<group>"; };
+		8B257C0B1ED012290090A78B /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		8B84EADF1EC54F8A001B1BFF /* PushPop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushPop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B84EAE21EC54F8A001B1BFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B84EAE71EC54F8A001B1BFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				8B84EAE21EC54F8A001B1BFF /* AppDelegate.swift */,
+				8B257C0B1ED012290090A78B /* MainController.swift */,
 				8B84EAF41EC5506E001B1BFF /* Push1ViewController.swift */,
 				8B84EAF61EC55076001B1BFF /* Push2ViewController.swift */,
 				8B84EAF81EC55080001B1BFF /* PopViewController.swift */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B2282991ECF487400FE73F3 /* ShadowViewController.swift in Sources */,
+				8B257C0C1ED012290090A78B /* MainController.swift in Sources */,
 				8B84EB0B1EC5A89E001B1BFF /* T2ViewController.swift in Sources */,
 				8B84EAF51EC5506E001B1BFF /* Push1ViewController.swift in Sources */,
 				8B84EAF71EC55076001B1BFF /* Push2ViewController.swift in Sources */,
