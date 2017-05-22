@@ -11,7 +11,10 @@ import UIKit
 class Push2ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     
+    @IBOutlet var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - View controller lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,29 +24,30 @@ class Push2ViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         self.automaticallyAdjustsScrollViewInsets = false
         
-        let imageView = UIImageView(image: UIImage(named: "demo-header"))
+        let imageView = UIImageView(image: UIImage(named: "room"))
         imageView.contentMode = .scaleAspectFill
-        imageView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.width * 0.75)
+        imageView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.width * 40/64)
         tableView.tableHeaderView = imageView
+        
+        titleLabel?.text = "Beast"
+        titleLabel?.alpha = 0.0
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if !useDefaultImage {
+        if currentBarTintColor != nil {
+            let image = UIImage.from(color: currentBarTintColor)
+            self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
+            self.navigationController?.navigationBar.shadowImage = image
+        } else {
             self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
             self.navigationController?.navigationBar.shadowImage = UIImage()
         }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
-        self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
-        self.navigationController?.navigationBar.shadowImage = nil
-    }
-    
-    private var useDefaultImage = false
+    // MARK: - Helper
+    private var currentBarTintColor: UIColor!
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         print("ssss \(offsetY)")
@@ -53,16 +57,15 @@ class Push2ViewController: UIViewController, UITableViewDataSource, UITableViewD
             let alpha = min(offsetY / 64, 1.0)
             let themeColor = UIColor(red: 247/255.0, green: 80/255.0, blue: 120/255.0, alpha: alpha)
 
+            currentBarTintColor = themeColor
+            
             let image = UIImage.from(color: themeColor)
             self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
             self.navigationController?.navigationBar.shadowImage = image
             
-            if offsetY > 64 {
-                useDefaultImage = true
-            }
-        } else {
+            self.titleLabel?.alpha = alpha
             
-            useDefaultImage = false
+        } else {
             self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
             self.navigationController?.navigationBar.shadowImage = UIImage()
         }
@@ -70,19 +73,13 @@ class Push2ViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     // MARK: - DataSource
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
     }
-    
-    
+        
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SampleCell", for: indexPath)
-        cell.textLabel?.text = "Cell"
+        cell.textLabel?.text = "\(indexPath)"
         
         return cell
     }
