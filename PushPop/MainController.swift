@@ -29,6 +29,9 @@ class MainController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let appearance = UIBarButtonItem.appearance()
+        appearance.setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -100, vertical: -100), for: UIBarMetrics.default)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
