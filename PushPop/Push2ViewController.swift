@@ -18,9 +18,6 @@ class Push2ViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let color = UIColor.white
-        color.withAlphaComponent(0.1)
         
         self.automaticallyAdjustsScrollViewInsets = false
         
@@ -30,7 +27,7 @@ class Push2ViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.tableHeaderView = imageView
         
         titleLabel?.text = "Beast"
-        titleLabel?.alpha = 0.0
+        titleLabel?.alpha = 0
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,6 +41,14 @@ class Push2ViewController: UIViewController, UITableViewDataSource, UITableViewD
             self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
             self.navigationController?.navigationBar.shadowImage = UIImage()
         }
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+        self.navigationController?.navigationBar.shadowImage = nil
     }
     
     // MARK: - Helper
