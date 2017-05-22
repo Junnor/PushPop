@@ -33,7 +33,7 @@ class MainController: UITableViewController {
         let itemAppearance = UIBarButtonItem.appearance()
         itemAppearance.setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -100, vertical: -100), for: UIBarMetrics.default)
         
-
+        self.navigationController?.navigationBar.tintColor = UIColor.white        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

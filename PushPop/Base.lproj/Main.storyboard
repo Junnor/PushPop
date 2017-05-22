@@ -212,7 +212,7 @@
             </objects>
             <point key="canvasLocation" x="-692" y="-1146"/>
         </scene>
-        <!--3-->
+        <!--3 vc-->
         <scene sceneID="rIX-Y7-v0o">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="MgJ-qb-R66" customClass="Push3ViewController" customModule="PushPop" customModuleProvider="target" sceneMemberID="viewController">
@@ -225,7 +225,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="3" id="2Gd-DV-lzy"/>
+                    <navigationItem key="navigationItem" title="3 vc" id="53x-SL-w0Q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l5l-Iy-A9K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -264,7 +264,7 @@
             </objects>
             <point key="canvasLocation" x="-1703" y="-844"/>
         </scene>
-        <!--1 -->
+        <!--1 vc-->
         <scene sceneID="biq-Lo-J8y">
             <objects>
                 <viewController id="huX-ll-G0i" customClass="Push1ViewController" customModule="PushPop" customModuleProvider="target" sceneMemberID="viewController">
@@ -280,9 +280,8 @@
                     <toolbarItems>
                         <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="9Cf-OJ-956"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="1 " id="1nx-gZ-uLf">
+                    <navigationItem key="navigationItem" title="1 vc" id="1nx-gZ-uLf">
                         <barButtonItem key="rightBarButtonItem" title="next" id="ReZ-zv-VGK">
-                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="4BW-yJ-mSH" kind="show" id="W5i-g9-yYk"/>
                             </connections>

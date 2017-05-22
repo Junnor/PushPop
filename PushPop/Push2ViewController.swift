@@ -26,23 +26,24 @@ class Push2ViewController: UIViewController, UITableViewDataSource, UITableViewD
         imageView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.width * 40/64)
         tableView.tableHeaderView = imageView
         
-        titleLabel?.text = "Beast"
-        titleLabel?.alpha = 0
+        titleLabel?.text = "Room"
+        titleLabel?.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if currentBarTintColor != nil {
-            let image = UIImage.from(color: currentBarTintColor)
-            self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
-            self.navigationController?.navigationBar.shadowImage = image
-        } else {
-            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-            self.navigationController?.navigationBar.shadowImage = UIImage()
+        if !useDefaultImage {
+            if currentBarTintColor != nil {
+                let image = UIImage.from(color: currentBarTintColor)
+                self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
+                self.navigationController?.navigationBar.shadowImage = image
+            } else {
+                self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+                self.navigationController?.navigationBar.shadowImage = UIImage()
+            }
         }
     }
-    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -52,27 +53,33 @@ class Push2ViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     // MARK: - Helper
+    private var useDefaultImage = false
     private var currentBarTintColor: UIColor!
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
-        print("ssss \(offsetY)")
+        
+        print("offset = \(offsetY)")
+        
+        titleLabel?.isHidden = offsetY > 0 ? false : true
 
         if offsetY >= 0 {
-            
+ 
             let alpha = min(offsetY / 64, 1.0)
-            let themeColor = UIColor(red: 247/255.0, green: 80/255.0, blue: 120/255.0, alpha: alpha)
-
-            currentBarTintColor = themeColor
-            
-            let image = UIImage.from(color: themeColor)
-            self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
-            self.navigationController?.navigationBar.shadowImage = image
-            
             self.titleLabel?.alpha = alpha
-            
-        } else {
-            self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-            self.navigationController?.navigationBar.shadowImage = UIImage()
+
+            let themeColor = UIColor(red: 247/255.0, green: 80/255.0, blue: 120/255.0, alpha: alpha)
+            currentBarTintColor = themeColor
+    
+            if offsetY >= 64 {
+                useDefaultImage = true
+                self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+                self.navigationController?.navigationBar.shadowImage = nil
+            } else {
+                useDefaultImage = false
+                let image = UIImage.from(color: themeColor)
+                self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
+                self.navigationController?.navigationBar.shadowImage = image
+            }
         }
     }
     
