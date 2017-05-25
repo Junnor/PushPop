@@ -13,14 +13,16 @@ class MainController: UITableViewController {
     private struct SegueIdentifer {
         static let layer = "layer"
         static let pushAndPop = "push and pop"
+        static let scrollViewInSB = "scroll view in sb"
         
         // customize
-        static let segueCount = 2
+        static let segueCount = 3
     }
     
     private enum SegueEnum: Int {
         case layer =  0
         case pushAndPop
+        case scrollViewInSB
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -48,6 +50,8 @@ class MainController: UITableViewController {
                 cell.textLabel?.text = SegueIdentifer.layer
             case .pushAndPop:
                 cell.textLabel?.text = SegueIdentifer.pushAndPop
+            case .scrollViewInSB:
+                cell.textLabel?.text = SegueIdentifer.scrollViewInSB
             }
         }
         return cell
@@ -60,6 +64,8 @@ class MainController: UITableViewController {
                 performSegue(withIdentifier: SegueIdentifer.layer, sender: indexPath)
             case .pushAndPop:
                 performSegue(withIdentifier: SegueIdentifer.pushAndPop, sender: indexPath)
+            case .scrollViewInSB:
+                performSegue(withIdentifier: SegueIdentifer.scrollViewInSB, sender: indexPath)
             }
         }
     }

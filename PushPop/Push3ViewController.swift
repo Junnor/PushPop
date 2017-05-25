@@ -10,7 +10,4 @@ import UIKit
 
 class Push3ViewController: UIViewController {
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 }
